@@ -1,0 +1,107 @@
+{
+  "schema": "tpm-coaster-snapshot",
+  "schemaVersion": 2,
+  "sourceStationDefinitionId": "-1872241465",
+  "TrackSupportData": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "TrackPieceData": [
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "-494764630"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    },
+    {
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      }
+    }
+  ],
+  "supportCount": 16,
+  "pieceCount": 16
+}

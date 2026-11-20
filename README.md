@@ -4,7 +4,7 @@
 
 Current version: **1.1.5** · Platform: **Windows x64** · Requires the rollercoaster/Funfair DLC and the native [TPM Mod Loader](https://github.com/SeanB-Mod/TPM-Mod-Loader).
 
-This repository is intended for the v1.1.5 source, build scripts, tests, documentation and Windows DLL. The compiled DLL in the release package was not rebuilt or modified.
+This repository contains the full v1.1.5 source, build scripts, tests, documentation and the Windows DLL from the game-tested v1.1.5 candidate. The binary was not rebuilt or modified for this GitHub package.
 
 This update improves idle performance and reduces repeated coaster-browser refresh work. It retains Save Template, local library, template building, price accounting, Steam Workshop publishing, and placed-coaster statistics.
 
@@ -41,7 +41,7 @@ FPS depends on the scene, hardware and other loaded mods; measurements are not a
 ## Installation (Windows)
 
 1. Exit Two Point Museum and back up any older `TPM-Coaster-Tools.dll` **outside** the game's mod folders.
-2. Copy `Mods/TPM-Coaster-Tools.dll` from the package into the game directory's `Mods` folder.
+2. Copy `Mods/TPM-Coaster-Tools.dll` into the game directory's `Mods` folder.
 3. For manual installs with TPM Mod Loader v1.3, add an unused numbered entry for `TPM-Coaster-Tools.dll` under `[Mods]` in `Mods/loader.ini`; local DLLs aren't auto-discovered.
 4. Restart the game. Confirm the DLL loads in `Mods/Logs/loader.log`.
 
@@ -60,6 +60,7 @@ This repository intentionally contains no `winhttp.dll` or `loader.ini`. Do not 
 In-game: the user confirmed the Save Template button works, smoother refreshes, and the above FPS results; latest game log includes completed saves and validated template reconstruction. Offline: source reproduced the compiled DLL SHA-256, all 11 reviewed November method guards match, the BuildSpline guard matches, and component JSON / template total pricing / Workshop price tests pass. Windows-only UI automated tests have not been run in this Linux build environment.
 
 Developed with assistance from ChatGPT by OpenAI.
+
 
 ## Project status and licensing
 

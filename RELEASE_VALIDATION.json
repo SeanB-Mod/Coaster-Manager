@@ -16,8 +16,8 @@
   "user_tests": {
     "Save Template v1.1.5": "confirmed working",
     "refresh hitches v1.1.5": "reported improved",
-    "solo FPS v1.1.5": "48–52",
-    "full mods FPS v1.1.5": "43–50 (user report; loader evidence not supplied for that test)"
+    "solo FPS v1.1.5": "48\u201352",
+    "full mods FPS v1.1.5": "43\u201350 (user report; loader evidence not supplied for that test)"
   },
   "not_validated": [
     "Windows-only automated UI tests",

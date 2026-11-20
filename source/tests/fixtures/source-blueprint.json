@@ -1,0 +1,581 @@
+{
+  "schema": "tpm-coaster-snapshot",
+  "schemaVersion": 2,
+  "exporterVersion": "0.4.9",
+  "readOnly": true,
+  "placementReady": false,
+  "coordinateFrame": "native-with-station-relative-world-position",
+  "supportOrientation": {
+    "source": "TrackSupportSnapshotData.Rotation",
+    "sourceSpace": "world",
+    "formula": "inverse(normalized station world quaternion) * normalized source quaternion",
+    "sourceSpaceConfirmed": true,
+    "verification": "runtime-writer-and-Transform-getter-slot-match",
+    "placementReady": false
+  },
+  "sourceStationId": "28044",
+  "sourceEntity": {
+    "index": 2364,
+    "version": 1
+  },
+  "stationFrameProbe": {
+    "status": "position-and-quaternion",
+    "semanticsConfirmed": false,
+    "positionAccessor": "get_GameObjectTransform().get_position",
+    "position": [
+      46.5,
+      0,
+      -21.0
+    ],
+    "rotationAccessor": "get_GameObjectTransform().get_rotation",
+    "rotation": [
+      0,
+      0.382683456,
+      0,
+      0.923879504
+    ],
+    "transformWorldPosition": [
+      46.5,
+      0,
+      -21.0
+    ],
+    "transformWorldRotation": [
+      0,
+      0.382683456,
+      0,
+      0.923879504
+    ],
+    "transformPositionAgreesWithStation": true
+  },
+  "stationPosition": [
+    46.5,
+    0,
+    -21.0
+  ],
+  "stationRotation": [
+    0,
+    0.382683456,
+    0,
+    0.923879504
+  ],
+  "floorFrameProbe": {
+    "status": "world-frame-read",
+    "source": "station.GetFloorAreaTransform()",
+    "supportFloorAssociationConfirmed": false,
+    "supportRotationSpaceConfirmed": true,
+    "worldPosition": [
+      -96.0,
+      0,
+      -144.0
+    ],
+    "worldRotation": [
+      0,
+      0,
+      0,
+      1.0
+    ]
+  },
+  "TrackSupportData": [
+    {
+      "listIndex": 0,
+      "SectionIndex": 0,
+      "Position": [
+        58.5,
+        0,
+        -7.5
+      ],
+      "PositionFloat32Bits": [
+        "0x426a0000",
+        "0x00000000",
+        "0xc0f00000"
+      ],
+      "Rotation": [
+        0,
+        0.382683456,
+        0,
+        0.923879504
+      ],
+      "StationRelativeRotation": [
+        0,
+        0,
+        0,
+        1.0
+      ],
+      "StationRelativeRotationStatus": "confirmed-world-source",
+      "RotationFloat32Bits": [
+        "0x80000000",
+        "0x3ec3ef16",
+        "0x80000000",
+        "0x3f6c835e"
+      ],
+      "LocalRotation": 45.0,
+      "LocalRotationFloat32Bits": "0x42340000",
+      "WorldPosition": [
+        58.5,
+        0,
+        -7.5
+      ],
+      "StationRelativeWorldPosition": [
+        -1.06066096,
+        0,
+        18.0312233
+      ],
+      "WorldPositionFloat32Bits": [
+        "0x426a0000",
+        "0x00000000",
+        "0xc0f00000"
+      ],
+      "FloorAreaInstance": {
+        "_id": "5510"
+      },
+      "Valid": true,
+      "Height": 1,
+      "TangentInModifier": 0,
+      "TangentInModifierFloat32Bits": "0x00000000",
+      "TangentOutModifier": 0,
+      "TangentOutModifierFloat32Bits": "0x00000000",
+      "BankingModifier": 0,
+      "BankingModifierFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 1,
+      "SectionIndex": 1,
+      "Position": [
+        71.5,
+        0,
+        -24.5
+      ],
+      "PositionFloat32Bits": [
+        "0x428f0000",
+        "0x00000000",
+        "0xc1c40000"
+      ],
+      "Rotation": [
+        0,
+        0.923879564,
+        0,
+        -0.382683396
+      ],
+      "StationRelativeRotation": [
+        0,
+        1.0,
+        0,
+        7.78772247e-08
+      ],
+      "StationRelativeRotationStatus": "confirmed-world-source",
+      "RotationFloat32Bits": [
+        "0x80000000",
+        "0x3f6c835f",
+        "0x80000000",
+        "0xbec3ef14"
+      ],
+      "LocalRotation": 225.0,
+      "LocalRotationFloat32Bits": "0x43610000",
+      "WorldPosition": [
+        71.5,
+        0,
+        -24.5
+      ],
+      "StationRelativeWorldPosition": [
+        20.1525421,
+        0,
+        15.2027969
+      ],
+      "WorldPositionFloat32Bits": [
+        "0x428f0000",
+        "0x00000000",
+        "0xc1c40000"
+      ],
+      "FloorAreaInstance": {
+        "_id": "5510"
+      },
+      "Valid": true,
+      "Height": 1,
+      "TangentInModifier": 0,
+      "TangentInModifierFloat32Bits": "0x00000000",
+      "TangentOutModifier": 0,
+      "TangentOutModifierFloat32Bits": "0x00000000",
+      "BankingModifier": 0,
+      "BankingModifierFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 2,
+      "SectionIndex": 2,
+      "Position": [
+        66.5,
+        0,
+        -32.0
+      ],
+      "PositionFloat32Bits": [
+        "0x42850000",
+        "0x00000000",
+        "0xc2000000"
+      ],
+      "Rotation": [
+        0,
+        1.0,
+        0,
+        -4.37113883e-08
+      ],
+      "StationRelativeRotation": [
+        0,
+        0.923879564,
+        0,
+        0.382683426
+      ],
+      "StationRelativeRotationStatus": "confirmed-world-source",
+      "RotationFloat32Bits": [
+        "0x80000000",
+        "0x3f800000",
+        "0x80000000",
+        "0xb33bbd2e"
+      ],
+      "LocalRotation": 180.0,
+      "LocalRotationFloat32Bits": "0x43340000",
+      "WorldPosition": [
+        66.5,
+        0,
+        -32.0
+      ],
+      "StationRelativeWorldPosition": [
+        21.9203091,
+        0,
+        6.3639617
+      ],
+      "WorldPositionFloat32Bits": [
+        "0x42850000",
+        "0x00000000",
+        "0xc2000000"
+      ],
+      "FloorAreaInstance": {
+        "_id": "5510"
+      },
+      "Valid": true,
+      "Height": 1,
+      "TangentInModifier": 0,
+      "TangentInModifierFloat32Bits": "0x00000000",
+      "TangentOutModifier": 0,
+      "TangentOutModifierFloat32Bits": "0x00000000",
+      "BankingModifier": 0,
+      "BankingModifierFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 3,
+      "SectionIndex": 3,
+      "Position": [
+        61.5,
+        0,
+        -42.0
+      ],
+      "PositionFloat32Bits": [
+        "0x42760000",
+        "0x00000000",
+        "0xc2280000"
+      ],
+      "Rotation": [
+        0,
+        0.707106829,
+        0,
+        -0.707106829
+      ],
+      "StationRelativeRotation": [
+        0,
+        0.923879564,
+        0,
+        -0.382683396
+      ],
+      "StationRelativeRotationStatus": "confirmed-world-source",
+      "RotationFloat32Bits": [
+        "0x80000000",
+        "0x3f3504f4",
+        "0x80000000",
+        "0xbf3504f4"
+      ],
+      "LocalRotation": 270.0,
+      "LocalRotationFloat32Bits": "0x43870000",
+      "WorldPosition": [
+        61.5,
+        0,
+        -42.0
+      ],
+      "StationRelativeWorldPosition": [
+        25.4558449,
+        0,
+        -4.24263954
+      ],
+      "WorldPositionFloat32Bits": [
+        "0x42760000",
+        "0x00000000",
+        "0xc2280000"
+      ],
+      "FloorAreaInstance": {
+        "_id": "5510"
+      },
+      "Valid": true,
+      "Height": 1,
+      "TangentInModifier": 0,
+      "TangentInModifierFloat32Bits": "0x00000000",
+      "TangentOutModifier": 0,
+      "TangentOutModifierFloat32Bits": "0x00000000",
+      "BankingModifier": 0,
+      "BankingModifierFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 4,
+      "SectionIndex": 4,
+      "Position": [
+        52.0,
+        0,
+        -48.0
+      ],
+      "PositionFloat32Bits": [
+        "0x42500000",
+        "0x00000000",
+        "0xc2400000"
+      ],
+      "Rotation": [
+        0,
+        1.0,
+        0,
+        -4.37113883e-08
+      ],
+      "StationRelativeRotation": [
+        0,
+        0.923879564,
+        0,
+        0.382683426
+      ],
+      "StationRelativeRotationStatus": "confirmed-world-source",
+      "RotationFloat32Bits": [
+        "0x80000000",
+        "0x3f800000",
+        "0x80000000",
+        "0xb33bbd2e"
+      ],
+      "LocalRotation": 180.0,
+      "LocalRotationFloat32Bits": "0x43340000",
+      "WorldPosition": [
+        52.0,
+        0,
+        -48.0
+      ],
+      "StationRelativeWorldPosition": [
+        22.9809704,
+        0,
+        -15.202795
+      ],
+      "WorldPositionFloat32Bits": [
+        "0x42500000",
+        "0x00000000",
+        "0xc2400000"
+      ],
+      "FloorAreaInstance": {
+        "_id": "5510"
+      },
+      "Valid": true,
+      "Height": 1,
+      "TangentInModifier": 0,
+      "TangentInModifierFloat32Bits": "0x00000000",
+      "TangentOutModifier": 0,
+      "TangentOutModifierFloat32Bits": "0x00000000",
+      "BankingModifier": 0,
+      "BankingModifierFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 5,
+      "SectionIndex": 5,
+      "Position": [
+        42.0,
+        0,
+        -44.5
+      ],
+      "PositionFloat32Bits": [
+        "0x42280000",
+        "0x00000000",
+        "0xc2320000"
+      ],
+      "Rotation": [
+        0,
+        0.382683486,
+        0,
+        -0.923879504
+      ],
+      "StationRelativeRotation": [
+        0,
+        0.707106829,
+        0,
+        -0.707106709
+      ],
+      "StationRelativeRotationStatus": "confirmed-world-source",
+      "RotationFloat32Bits": [
+        "0x80000000",
+        "0x3ec3ef17",
+        "0x80000000",
+        "0xbf6c835e"
+      ],
+      "LocalRotation": 315.0,
+      "LocalRotationFloat32Bits": "0x439d8000",
+      "WorldPosition": [
+        42.0,
+        0,
+        -44.5
+      ],
+      "StationRelativeWorldPosition": [
+        13.43503,
+        0,
+        -19.7989883
+      ],
+      "WorldPositionFloat32Bits": [
+        "0x42280000",
+        "0x00000000",
+        "0xc2320000"
+      ],
+      "FloorAreaInstance": {
+        "_id": "5510"
+      },
+      "Valid": true,
+      "Height": 1,
+      "TangentInModifier": 0,
+      "TangentInModifierFloat32Bits": "0x00000000",
+      "TangentOutModifier": 0,
+      "TangentOutModifierFloat32Bits": "0x00000000",
+      "BankingModifier": 0,
+      "BankingModifierFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 6,
+      "SectionIndex": 6,
+      "Position": [
+        31.0,
+        0,
+        -33.5
+      ],
+      "PositionFloat32Bits": [
+        "0x41f80000",
+        "0x00000000",
+        "0xc2060000"
+      ],
+      "Rotation": [
+        0,
+        0.382683456,
+        0,
+        0.923879504
+      ],
+      "StationRelativeRotation": [
+        0,
+        0,
+        0,
+        1.0
+      ],
+      "StationRelativeRotationStatus": "confirmed-world-source",
+      "RotationFloat32Bits": [
+        "0x80000000",
+        "0x3ec3ef16",
+        "0x80000000",
+        "0x3f6c835e"
+      ],
+      "LocalRotation": 45.0,
+      "LocalRotationFloat32Bits": "0x42340000",
+      "WorldPosition": [
+        31.0,
+        0,
+        -33.5
+      ],
+      "StationRelativeWorldPosition": [
+        -2.12131953,
+        0,
+        -19.7989902
+      ],
+      "WorldPositionFloat32Bits": [
+        "0x41f80000",
+        "0x00000000",
+        "0xc2060000"
+      ],
+      "FloorAreaInstance": {
+        "_id": "5510"
+      },
+      "Valid": true,
+      "Height": 1,
+      "TangentInModifier": 0,
+      "TangentInModifierFloat32Bits": "0x00000000",
+      "TangentOutModifier": 0,
+      "TangentOutModifierFloat32Bits": "0x00000000",
+      "BankingModifier": 0,
+      "BankingModifierFloat32Bits": "0x00000000"
+    }
+  ],
+  "TrackPieceData": [
+    {
+      "listIndex": 0,
+      "SectionIndex": 0,
+      "TrackPieceDefinitionID": "-115856756",
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      },
+      "DecorationPosition": 0.5,
+      "DecorationPositionFloat32Bits": "0x3f000000"
+    },
+    {
+      "listIndex": 1,
+      "SectionIndex": 1,
+      "TrackPieceDefinitionID": "-115856756",
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      },
+      "DecorationPosition": 0,
+      "DecorationPositionFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 2,
+      "SectionIndex": 2,
+      "TrackPieceDefinitionID": "-115856756",
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      },
+      "DecorationPosition": 0,
+      "DecorationPositionFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 3,
+      "SectionIndex": 3,
+      "TrackPieceDefinitionID": "-115856756",
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      },
+      "DecorationPosition": 0,
+      "DecorationPositionFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 4,
+      "SectionIndex": 4,
+      "TrackPieceDefinitionID": "-115856756",
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      },
+      "DecorationPosition": 0,
+      "DecorationPositionFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 5,
+      "SectionIndex": 5,
+      "TrackPieceDefinitionID": "-115856756",
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      },
+      "DecorationPosition": 0,
+      "DecorationPositionFloat32Bits": "0x00000000"
+    },
+    {
+      "listIndex": 6,
+      "SectionIndex": 6,
+      "TrackPieceDefinitionID": "-115856756",
+      "TrackPieceDecorationDefinition": {
+        "_id": "0"
+      },
+      "DecorationPosition": 0,
+      "DecorationPositionFloat32Bits": "0x00000000"
+    }
+  ],
+  "supportCount": 7,
+  "pieceCount": 7
+}
