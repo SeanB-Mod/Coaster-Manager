@@ -1,0 +1,20 @@
+# Native build intermediates
+source/build/
+*.obj
+*.lib
+*.pdb
+*.ilk
+*.exp
+
+# Runtime output; do not commit user templates or logs
+*.log
+*.log.*
+*.dmp
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+
+# Local settings (never overwrite each user's loader configuration)
+loader.ini

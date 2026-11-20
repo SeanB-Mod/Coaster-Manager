@@ -1,0 +1,26 @@
+COASTER MANAGER 1.1.5 — WINDOWS x64 INSTALLATION
+
+For existing Steam Workshop subscribers:
+  Update the EXISTING Coaster Manager item with the Workshop-Upload ZIP
+  contents, or wait for its owner to update it. Do NOT install a duplicate
+  local copy unless deliberately testing a manual override.
+
+For manual/Nexus installation:
+  1. Exit Two Point Museum.
+  2. Back up any earlier TPM-Coaster-Tools.dll OUTSIDE all scanned mod folders.
+  3. Copy Mods/TPM-Coaster-Tools.dll from this ZIP into the game directory.
+  4. IMPORTANT: The v1.3 loader does NOT automatically discover unlisted
+     local Mods/*.dll. Edit Mods/loader.ini and add an unused numbered line
+     in [Mods], e.g. 8=TPM-Coaster-Tools.dll (keep existing entries).
+     A configured local DLL takes precedence over an identically named
+     Workshop DLL. An already-loaded duplicate is skipped.
+  5. If using diagnostic loader v1.3.3, REMOVE LoadOnly or set LoadOnly=
+     and AuditOnly=0 when ready to use all mods. Do not install
+     v1.3.3 solely for this mod; the public loader v1.3 works.
+  6. Restart the game. Check Mods/Logs/loader.log for the actual path
+     reported in 'DLL path' and a successful LOADED line; check the Coaster
+     Manager log for 'v1.1.5 - SHARED UI ASSET CACHE'.
+
+Loader files and your loader.ini are NOT included or modified by this ZIP.
+The Windows DLL is identical to the user-tested v1.1.5 candidate.
+SHA-256: 2a9431c531bfa94ada28ea99cd7ece1f183322458c267f085aa0de1848e93a7a
