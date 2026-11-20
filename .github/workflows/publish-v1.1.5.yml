@@ -1,0 +1,91 @@
+name: Import Coaster Manager v1.1.5 and publish release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - incoming/Coaster-Manager-v1.1.5-GitHub-Ready.zip
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Verify, import source and publish v1.1.5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify ZIP, import source and prepare Workshop release asset
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path, PurePosixPath
+          from zipfile import ZipFile, ZIP_DEFLATED
+          import hashlib
+          import os
+          import stat
+
+          incoming = Path("incoming/Coaster-Manager-v1.1.5-GitHub-Ready.zip")
+          if not incoming.is_file():
+              raise SystemExit("Upload Coaster-Manager-v1.1.5-GitHub-Ready.zip into incoming/ first")
+          expected = "2a9431c531bfa94ada28ea99cd7ece1f183322458c267f085aa0de1848e93a7a"
+
+          with ZipFile(incoming) as archive:
+              entries = {name: archive.read(name) for name in archive.namelist() if not name.endswith("/")}
+              needed = "Mods/TPM-Coaster-Tools.dll"
+              if needed not in entries or "source/coaster_selection_probe.c" not in entries:
+                  raise SystemExit("Invalid source ZIP: missing DLL or C source")
+              actual = hashlib.sha256(entries[needed]).hexdigest()
+              if actual != expected:
+                  raise SystemExit(f"DLL SHA-256 mismatch: {actual}")
+
+              for name, data in entries.items():
+                  p = PurePosixPath(name)
+                  if p.is_absolute() or ".." in p.parts or "\\" in name or not p.parts:
+                      raise SystemExit(f"Unsafe archive entry: {name}")
+                  if p.parts[0] in {".git", ".github", "incoming", "release-assets"}:
+                      raise SystemExit(f"Archive cannot overwrite repository control files: {name}")
+                  dest = Path(*p.parts)
+                  dest.parent.mkdir(parents=True, exist_ok=True)
+                  dest.write_bytes(data)
+
+          out = Path(os.environ["RUNNER_TEMP"]) / "Coaster-Manager-v1.1.5-Workshop-Upload.zip"
+          with ZipFile(out, "w", compression=ZIP_DEFLATED, compresslevel=9) as release_zip:
+              release_zip.writestr("DLL Mod/TPM-Coaster-Tools.dll", entries[needed])
+          with ZipFile(out) as verify_zip:
+              if hashlib.sha256(verify_zip.read("DLL Mod/TPM-Coaster-Tools.dll")).hexdigest() != expected:
+                  raise SystemExit("Generated Workshop archive failed verification")
+
+          incoming.unlink()
+          print(f"Verified and imported {len(entries)} source package files")
+          print(f"Workshop ZIP: {out}, {out.stat().st_size} bytes")
+          PY
+
+      - name: Commit imported source
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Import complete Coaster Manager v1.1.5 source and tested DLL"
+            git push origin HEAD:main
+          fi
+
+      - name: Create or update GitHub release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          asset="$RUNNER_TEMP/Coaster-Manager-v1.1.5-Workshop-Upload.zip"
+          if ! gh release view v1.1.5 >/dev/null 2>&1; then
+            gh release create v1.1.5 \
+              --target main \
+              --title "Coaster Manager v1.1.5 — Windows x64" \
+              --notes-file RELEASE_NOTES.md \
+              --latest
+          fi
+          gh release upload v1.1.5 "$asset" --clobber
+          gh release view v1.1.5 --json url,assets
